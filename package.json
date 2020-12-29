@@ -13,7 +13,7 @@
   "dependencies": {
     "@google-cloud/storage": "^5.7.0",
     "knex": "<0.20.0",
-    "pg": "latest",
+    "pg": "^8.5.1",
     "pg-connection-string": "^2.4.0",
     "strapi": "3.4.1",
     "strapi-admin": "3.4.1",
