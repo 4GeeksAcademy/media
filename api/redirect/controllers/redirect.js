@@ -37,7 +37,7 @@ module.exports = {
             ctx.throw(404, `Academy ${academy} not found`)
         } 
         
-        const doc = academy.syllabi.find(c => c.course == course);
+        const doc = _academy.syllabi.find(c => c.course == course);
         if(!doc){
             ctx.throw(404, `Syllabus for ${academy}, ${course} not found`)
         } 
