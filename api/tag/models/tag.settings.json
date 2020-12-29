@@ -15,6 +15,18 @@
     },
     "slug": {
       "type": "uid"
+    },
+    "videos": {
+      "via": "tags",
+      "collection": "video"
+    },
+    "photo_galleries": {
+      "via": "tags",
+      "collection": "photo-gallery"
+    },
+    "video_galleries": {
+      "via": "tags",
+      "collection": "video-gallery"
     }
   }
 }

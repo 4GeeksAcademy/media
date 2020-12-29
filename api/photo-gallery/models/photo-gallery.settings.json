@@ -33,6 +33,21 @@
         "rigoberto_variations"
       ],
       "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "minLength": 40
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "minLength": 10
+    },
+    "tags": {
+      "collection": "tag",
+      "via": "photo_galleries",
+      "dominant": true
     }
   }
 }

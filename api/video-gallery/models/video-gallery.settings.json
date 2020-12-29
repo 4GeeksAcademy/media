@@ -20,8 +20,13 @@
       "required": true
     },
     "videos": {
+      "collection": "video",
+      "via": "video_galleries"
+    },
+    "tags": {
+      "collection": "tag",
       "via": "video_galleries",
-      "collection": "video"
+      "dominant": true
     }
   }
 }
