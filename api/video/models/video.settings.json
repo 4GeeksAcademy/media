@@ -33,8 +33,8 @@
       "required": true
     },
     "academies": {
-      "collection": "academy",
       "via": "videos",
+      "collection": "academy",
       "dominant": true
     },
     "video_galleries": {

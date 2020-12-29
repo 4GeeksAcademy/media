@@ -32,6 +32,23 @@
     },
     "type": {
       "model": "document-type"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "course": {
+      "type": "enumeration",
+      "enum": [
+        "full_stack",
+        "full_stack_ft",
+        "software_engineering",
+        "ai_engineering"
+      ],
+      "required": true
+    },
+    "public_url": {
+      "type": "string"
     }
   }
 }

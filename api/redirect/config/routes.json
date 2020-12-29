@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/document/:slug_or_id",
+      "handler": "redirect.download_document",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/syllabus/:academy/:course",
+      "handler": "redirect.download_syllabus",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

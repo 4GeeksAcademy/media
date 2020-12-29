@@ -29,8 +29,8 @@
       "via": "academies",
       "collection": "document"
     },
-    "syllabus": {
-      "model": "document"
+    "syllabi": {
+      "collection": "document"
     },
     "icon": {
       "model": "file",
@@ -49,8 +49,8 @@
       "required": true
     },
     "videos": {
-      "via": "academies",
-      "collection": "video"
+      "collection": "video",
+      "via": "academies"
     }
   }
 }
