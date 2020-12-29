@@ -27,9 +27,9 @@ module.exports = {
         ctx.body = request(doc.file.url);
     },
     download_syllabus: async ctx => {
-        console.log("welelele")
-        const { academy, course } = ctx.params;
 
+        const { academy, course } = ctx.params;
+        let _course = course.replace("-", "_");
         let _academy = await strapi.query('academy').findOne({ slug: academy });
         if(!_academy && parseInt(academy)) academy = await strapi.query('academy').findOne({ id: academy });
         
@@ -37,9 +37,9 @@ module.exports = {
             ctx.throw(404, `Academy ${academy} not found`)
         } 
         
-        const doc = _academy.syllabi.find(c => c.course == course);
+        const doc = _academy.syllabi.find(c => c.course == _course);
         if(!doc){
-            ctx.throw(404, `Syllabus for ${academy}, ${course} not found`)
+            ctx.throw(404, `Syllabus for ${academy}, ${_course} not found`)
         } 
 
         ctx.type = extname(doc.file.url);
