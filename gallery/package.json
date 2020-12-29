@@ -11,26 +11,29 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "strapi": "3.1.0-alpha.5",
-    "strapi-admin": "3.1.0-alpha.5",
-    "strapi-utils": "3.1.0-alpha.5",
-    "strapi-plugin-content-type-builder": "3.1.0-alpha.5",
-    "strapi-plugin-content-manager": "3.1.0-alpha.5",
-    "strapi-plugin-users-permissions": "3.1.0-alpha.5",
-    "strapi-plugin-email": "3.1.0-alpha.5",
-    "strapi-plugin-upload": "3.1.0-alpha.5",
-    "strapi-connector-bookshelf": "3.1.0-alpha.5",
+    "@google-cloud/storage": "^5.7.0",
     "knex": "<0.20.0",
-    "sqlite3": "latest"
+    "pg": "latest",
+    "strapi": "3.4.1",
+    "strapi-admin": "3.4.1",
+    "strapi-connector-bookshelf": "3.4.1",
+    "strapi-plugin-content-manager": "3.4.1",
+    "strapi-plugin-content-type-builder": "3.4.1",
+    "strapi-plugin-email": "3.4.1",
+    "strapi-plugin-upload": "3.4.1",
+    "strapi-plugin-users-permissions": "3.4.1",
+    "strapi-provider-email-mailgun": "^3.4.1",
+    "strapi-provider-upload-google-cloud-storage": "^3.1.6",
+    "strapi-utils": "3.4.1"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "006ad940-9a49-4bf6-9e7f-1e613ba83d73"
+    "uuid": "7b37b35b-a018-4172-ab14-037db804b5ec"
   },
   "engines": {
-    "node": ">=10.0.0",
+    "node": ">=10.16.0 <=14.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"

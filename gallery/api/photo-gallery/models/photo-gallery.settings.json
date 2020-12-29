@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "photo_galleries",
+  "info": {
+    "name": "PhotoGallery",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "geektalk",
+        "workshop",
+        "logos",
+        "rigoberto_variations"
+      ],
+      "required": true
+    }
+  }
+}
