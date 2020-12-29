@@ -8,6 +8,9 @@ const extname = path.extname;
  */
 
 module.exports = {
+    to_login: async ctx => {
+        ctx.redirect('/admin');
+    },
     download_document: async ctx => {
         const { slug_or_id } = ctx.params;
 

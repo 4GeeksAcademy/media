@@ -2,6 +2,14 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/",
+      "handler": "redirect.to_login",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/document/:slug_or_id",
       "handler": "redirect.download_document",
       "config": {
