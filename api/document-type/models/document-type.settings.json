@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "document_types",
+  "info": {
+    "name": "DocumentType",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    }
+  }
+}

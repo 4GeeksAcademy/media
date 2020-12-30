@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "name": "tag"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "videos": {
+      "via": "tags",
+      "collection": "video"
+    },
+    "photo_galleries": {
+      "via": "tags",
+      "collection": "photo-gallery"
+    },
+    "video_galleries": {
+      "via": "tags",
+      "collection": "video-gallery"
+    }
+  }
+}

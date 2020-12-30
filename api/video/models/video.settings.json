@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videos",
+  "info": {
+    "name": "Video",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "student_testimonial",
+        "student_project",
+        "video_ad",
+        "office_frame",
+        "tutorial",
+        "workshop_streaming",
+        "event_streaming",
+        "geektalk"
+      ],
+      "required": true
+    },
+    "is_raw": {
+      "type": "boolean",
+      "required": true
+    },
+    "academies": {
+      "collection": "academy",
+      "via": "videos",
+      "dominant": true
+    },
+    "video_galleries": {
+      "via": "videos",
+      "collection": "video-gallery",
+      "dominant": true
+    },
+    "file": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "minLength": 40
+    },
+    "tags": {
+      "collection": "tag",
+      "via": "videos",
+      "dominant": true
+    }
+  }
+}

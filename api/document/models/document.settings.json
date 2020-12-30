@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documents",
+  "info": {
+    "name": "Document",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "file": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "academies": {
+      "collection": "academy",
+      "via": "documents",
+      "dominant": true
+    },
+    "type": {
+      "model": "document-type"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "course": {
+      "type": "enumeration",
+      "enum": [
+        "full_stack",
+        "full_stack_ft",
+        "software_engineering",
+        "ai_engineering"
+      ],
+      "required": true
+    },
+    "public_url": {
+      "type": "string"
+    },
+    "private_interactive_url": {
+      "type": "string",
+      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)",
+      "minLength": 8
+    },
+    "public_interactive_url": {
+      "type": "string"
+    }
+  }
+}
